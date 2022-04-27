@@ -15,8 +15,9 @@ class ProductPage(BasePage):
     def should_be_product_added_message(self):
 
         book_added_message = self.browser.find_element(*ProductPageLocators.PRODUCT_ADDED_MESSAGE)
+        product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME)
         book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME)
-        assert book_name.text in book_added_message.text, "Confirmation message does not include name of product"
+        assert book_name.text == product_name.text, "Confirmation message does not include name of product"
 
     def should_be_basket_total_message(self):
         basket_total_message = self.browser.find_element(*ProductPageLocators.BASKET_TOTAL_MESSAGE)

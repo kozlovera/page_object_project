@@ -15,3 +15,14 @@ class ProductPageLocators():
     BOOK_NAME = (By.CSS_SELECTOR, "div.product_main h1")
     BASKET_TOTAL_MESSAGE = (By.CSS_SELECTOR, "div.alert:nth-child(3) div.alertinner")
     PRICE = (By.CSS_SELECTOR, "div.product_main p.price_color")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    VIEW_BASKET_BUTTON = (By.CSS_SELECTOR, "span.btn-group a.btn")
+
+class BasketPageLocators():
+    BASKET_ITEM = (By.CSS_SELECTOR, "div.basket-items")
+    BASKET_EMPTY_MESSAGE = (By.CSS_SELECTOR, "div#content_inner")
+
+
+
